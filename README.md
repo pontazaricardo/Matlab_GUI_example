@@ -10,6 +10,8 @@ Run the *Main.m* file in Matlab.
 
 ## Code
 
+There are three different sections in this code.
+
 ### Buttons
 
 This example shows how to create clickable buttons in the main GUI and how to assign a method to this button.
