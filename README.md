@@ -8,7 +8,9 @@ Run the *Main.m* file in Matlab.
 
 ![image0](/images/img01.png?raw=true)
 
-## Commands
+## Code
+
+### Buttons
 
 This example shows how to create clickable buttons in the main GUI and how to assign a method to this button.
 
@@ -56,3 +58,43 @@ switch(action)
 		error('Unknown action string!');
 end
 ```
+### Mouse pointer
+
+This file allows the user to use the mouse as a pointer and paint all over the window. The code related to this is
+```matlab
+switch(action)
+	case 'start'    
+		set(gcf, 'WindowButtonDownFcn', 'Main down');
+	case 'down' % the callback function when button is pressed
+		
+		% update the callback function of mouse movement
+		set(gcf, 'WindowButtonMotionFcn', 'Main move');
+		
+		% update the callback function of mouse button released
+		set(gcf, 'WindowButtonUpFcn', 'Main up');
+
+	case 'up'   % the callback function when button is released
+
+		% update the callback function of mouse movement
+		set(gcf, 'WindowButtonMotionFcn', '');
+		
+		% update the callback function of mouse button released
+		set(gcf, 'WindowButtonUpFcn', '');
+		
+	case 'move' % the callback function when mouse is moved with key pressed
+
+		currPt = get(gca, 'CurrentPoint');
+		x = currPt(1,1);
+		y = currPt(1,2);
+
+		line(x, y, 'marker', '*','color','b');
+		
+	otherwise
+		error('Unknown action string!');
+end
+```
+
+## Commands
+
+The commands that were used in this file are:
+1. 
