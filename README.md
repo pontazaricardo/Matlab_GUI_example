@@ -32,3 +32,23 @@ switch(action)
 		error('Unknown action string!');
 end
 ```
+and if you want to add a new button, just do it in the *start* section as
+```matlab
+if nargin<1, action='start'; end
+
+switch(action)
+	case 'start'    
+		h = uicontrol('position',[10,5,80,30]);
+		set(h, 'String', 'Button text');
+		set(h, 'Callback','Main method');
+		
+		h2 = uicontrol('position',[190,5,80,30]);
+		set(h2, 'String', 'Rotate');
+		set(h2, 'Callback','Main rotate');
+
+	case 'method'
+		fprintf('Button Pressed\n');
+	otherwise
+		error('Unknown action string!');
+end
+```
