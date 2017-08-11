@@ -13,6 +13,22 @@ This example shows how to create clickable buttons in the main GUI and how to as
 The code for creating a button is 
 ```matlab
 h = uicontrol('position',[10,5,80,30]);
-set(h, 'String', 'Clear');
-set(h, 'Callback','Main erase');
+set(h, 'String', 'Button text');
+set(h, 'Callback','Main method');
+```
+and you implement it as
+
+```matlab
+if nargin<1, action='start'; end
+
+switch(action)
+    case 'start'    
+        h = uicontrol('position',[10,5,80,30]);
+        set(h, 'String', 'Button text');
+        set(h, 'Callback','Main method');
+    case 'method'
+        fprintf('Button Pressed\n');
+    otherwise
+		error('Unknown action string!');
+end
 ```
