@@ -105,3 +105,20 @@ line(x, y, 'marker', '*','color','r');	%red
 line(x, y, 'marker', '*','color','g');	%green
 line(x, y, 'marker', '*','color','k');	%black
 ```
+
+## Window rotation
+
+This example shows two ways on how to make a window rotation.
+```matlab
+case 'rotate'
+	for i=1:36
+		camroll(10)
+		drawnow
+	end
+case 'rotate2'
+	slider = findobj(0, 'tag', 'sliderBox');
+	valueSlider=get(slider, 'value');
+	valueSlider=floor(valueSlider*100);
+	valueSliderTotal=valueSlider*360/100;
+	view([valueSliderTotal,90])
+```
