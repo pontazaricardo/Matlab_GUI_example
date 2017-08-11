@@ -93,8 +93,4 @@ switch(action)
 		error('Unknown action string!');
 end
 ```
-
-## Commands
-
-The commands that were used in this file are:
-1. 
+![image1](/images/matlab.gif?raw=true)
