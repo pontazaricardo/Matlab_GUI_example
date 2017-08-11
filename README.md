@@ -6,6 +6,8 @@ This is an example of how to program a simple GUI for a graph window in Matlab.
 
 Run the *Main.m* file in Matlab.
 
+![image0](/images/img01.png?raw=true)
+
 ## Commands
 
 This example shows how to create clickable buttons in the main GUI and how to assign a method to this button.
