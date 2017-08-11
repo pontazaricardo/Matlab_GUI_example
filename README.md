@@ -1,6 +1,6 @@
 # Matlab_GUI_example
 
-This is an example of how to program a simple GUI for a graph window in Matlab.
+This is an example of a simple GUI for a figure window in Matlab.
 
 ## Usage
 
