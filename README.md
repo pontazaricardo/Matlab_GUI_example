@@ -48,6 +48,8 @@ switch(action)
 
 	case 'method'
 		fprintf('Button Pressed\n');
+	case 'rotate'
+		%your code here.
 	otherwise
 		error('Unknown action string!');
 end
