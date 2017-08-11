@@ -22,13 +22,13 @@ and you implement it as
 if nargin<1, action='start'; end
 
 switch(action)
-    case 'start'    
-        h = uicontrol('position',[10,5,80,30]);
-        set(h, 'String', 'Button text');
-        set(h, 'Callback','Main method');
-    case 'method'
-        fprintf('Button Pressed\n');
-    otherwise
+	case 'start'    
+		h = uicontrol('position',[10,5,80,30]);
+		set(h, 'String', 'Button text');
+		set(h, 'Callback','Main method');
+	case 'method'
+		fprintf('Button Pressed\n');
+	otherwise
 		error('Unknown action string!');
 end
 ```
