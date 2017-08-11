@@ -10,7 +10,10 @@ Run the *Main.m* file in Matlab.
 
 ## Code
 
-There are three different sections in this code.
+There are three different sections in this code:
+1. Buttons,
+2. Mouse pointer,
+3. Window rotation.
 
 ### Buttons
 
