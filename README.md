@@ -93,3 +93,15 @@ switch(action)
 		error('Unknown action string!');
 end
 ```
+#### Pointer colors
+
+If you want to change the color of the pointer, you can use the following options
+```matlab
+line(x, y, 'marker', '*','color','b');	%blue
+line(x, y, 'marker', '*','color','y');	%yellow
+line(x, y, 'marker', '*','color','m');	%magenta
+line(x, y, 'marker', '*','color','c');	%cyan
+line(x, y, 'marker', '*','color','r');	%red
+line(x, y, 'marker', '*','color','g');	%green
+line(x, y, 'marker', '*','color','k');	%black
+```
